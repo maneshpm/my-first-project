@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-function Home() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>CollabEngine Home 🚀</h1>
-    </div>
-  );
-}
+import Layout from './components/Layout';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* Public page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Protected layout area */}
+        <Route element={<Layout />}>
+          {/* We will add pages step-by-step */}
+        </Route>
       </Routes>
     </Router>
   );
