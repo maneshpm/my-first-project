@@ -1,8 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+function SafeHome() {
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>CollabEngine Home 🚀</h1>
+    </div>
+  );
+}
+
 function App() {
   return (
-    <div style={{ backgroundColor: "white", minHeight: "100vh", color: "black" }}>
-      CollabEngine Working 🚀
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SafeHome />} />
+      </Routes>
+    </Router>
   );
 }
 
