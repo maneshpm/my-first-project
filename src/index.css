@@ -2,12 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   GLOBAL BASE STYLES
+========================= */
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background: #0a0f1a;
+
+  /* FIX: prevent black screen */
+  background: #f8fafc;
+  color: #0f172a;
+
+  margin: 0;
+  padding: 0;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* =========================
+   SCROLLBAR STYLING
+========================= */
 
 * {
   scrollbar-width: thin;
@@ -30,4 +50,13 @@ body {
 
 *::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 116, 139, 0.5);
+}
+
+/* =========================
+   SAFETY FIX (IMPORTANT)
+   prevents hidden text issues
+========================= */
+
+* {
+  color: inherit;
 }
