@@ -1,5 +1,9 @@
 function App() {
-  return <h1>CollabEngine Working 🚀</h1>;
+  return (
+    <div style={{ backgroundColor: "white", minHeight: "100vh", color: "black" }}>
+      CollabEngine Working 🚀
+    </div>
+  );
 }
 
 export default App;
