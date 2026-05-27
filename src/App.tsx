@@ -1,21 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import LandingPage from './pages/LandingPage';
-
 function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* Public page */}
-        <Route path="/" element={<LandingPage />} />
-
-        {/* Protected layout area */}
-        <Route element={<Layout />}>
-          {/* We will add pages step-by-step */}
-        </Route>
-      </Routes>
-    </Router>
-  );
+  return <h1 style={{ padding: 20 }}>App is alive 🚀</h1>;
 }
 
 export default App;
